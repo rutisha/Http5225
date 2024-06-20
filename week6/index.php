@@ -21,6 +21,7 @@
   </div>
   
   <?php 
+      include('inc/functions.php');
       require('reusable/conn.php');
 
       $query = 'SELECT * FROM schools';
@@ -32,6 +33,11 @@
 
   <div class="container-fluid">
     <div class="container">
+      <div class="row">
+        <div class="col">
+          <?php get_message(); ?>
+        </div>
+      </div>
       <div class="row">
         <?php
           foreach($schools as $school){
