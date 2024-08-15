@@ -1,6 +1,7 @@
-<?php
+<?php 
+   require('inc/autoload.php');
+   //secure('admin'); 
 
-include('reusable/conn.php');
 $id = $_GET['id'];
 $query = "SELECT * FROM animal_dataset WHERE `id` = '$id' ";
 $animal = mysqli_query($connect, $query);

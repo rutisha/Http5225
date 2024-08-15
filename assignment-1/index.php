@@ -42,6 +42,7 @@
              foreach($animals as $animal){
                 echo '<div class="col-md-4 mt-2 mb-2">
                         <div class="card">
+                              <img src="' . $animal['image_path'] . '" class="card-img-top" alt="' . $animal['animal_name'] . '">
                             <div class="card-body">
                                 <h4 class="card-title">' . $animal['animal_name'] . '</h4>
                                 <p class="card-text"><b>Height: </b>' . $animal['height'] . ' cm </p>

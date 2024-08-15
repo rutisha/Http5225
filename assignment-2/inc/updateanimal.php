@@ -20,7 +20,6 @@ if(isset($_POST['updateAnimal'])){
 
     $image_new = 'uploads/' . basename($image['name']);
 
-
 require('../reusable/conn.php');
 $query = "UPDATE `animal_dataset` SET 
          `animal_name`= '$animalName', `height` = '$height', `weight` = '$weight', `color` = '$color', 
@@ -30,7 +29,7 @@ $query = "UPDATE `animal_dataset` SET
 $animal = mysqli_query($connect, $query);
 
 if($animal) {
-    header('Location: ../index.php');
+    header('Location: ../animals.php');
 }else{
     echo "Failed: ".mysqli_error($connect);
 }

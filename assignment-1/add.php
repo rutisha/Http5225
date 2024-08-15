@@ -24,15 +24,15 @@
   
   <?php 
       require('reusable/conn.php');
-      $query = 'SELECT * FROM animal';
-      $schools = mysqli_query($connect, $query);
+      $query = 'SELECT * FROM animal_dataset';
+      $animal = mysqli_query($connect, $query);
   ?>
 
   <div class="container-fluid">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <form action="inc/addanimal.php" method="POST">
+          <form action="inc/addanimal.php" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
               <label for="animalName" class="form-label">Animal Name:</label>
               <input type="text" class="form-control" id="animalName" name="animalName" aria-describedby="animalName">
@@ -73,7 +73,11 @@
               <label for="countries" class="form-label">Countries:</label>
               <input type="text" class="form-control" id="countries" name="countries">
             </div>
-            <button type="submit" class="btn btn-primary">Add Animal</button>
+            <div class="mb-3">
+              <label for="image" class="form-label">Images:</label>
+              <input type="file" class="form-control" id="image" name="image">
+            </div>
+            <button type="submit" class="btn btn-primary" name="add">Add Animal</button>
           </form>
         </div>
       </div>

@@ -31,7 +31,7 @@ $animal =  mysqli_query($connect, $query);
 
 if($animal) {
     set_message("Animal added succesfully", "success");
-    header('Location: ../index.php');
+    header('Location: ../animals.php');
 }else{
     echo "Failed: ".mysqli_error($connect);
 }
